@@ -5,7 +5,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :persons_name,   null: false
       t.string :places,         null: false
       t.text   :memos,          null: false
-      t.date   :found_date,     null: false
+      t.datetime   :found_date,     null: false
       t.timestamps
     end
   end

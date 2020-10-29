@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_10_29_021246) do
     t.string "persons_name", null: false
     t.string "places", null: false
     t.text "memos", null: false
-    t.date "found_date", null: false
+    t.datetime "found_date", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
