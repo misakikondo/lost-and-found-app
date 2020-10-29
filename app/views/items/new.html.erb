@@ -1,0 +1,10 @@
+<h1>落とし物投稿画面</h1>
+
+<%= form_with model: @item, local: true do |f| %>
+  <%=f.text_area :persons_name, placeholder:"あなたの名前", maxlength:"10"%>
+  <%=f.text_area :items_name, placeholder:"子供サイズの靴下"%>
+  <%=f.text_area :places, placeholder:"新宿駅西口周辺"%>
+  <%=f.text_area :memos, placeholder:"改札を出てすぐ左に落ちているのを見つけました"%>
+  <%= f.datetime_select :found_date, {} %>
+  <%= f.submit "投稿する" ,class: "new-btn-text" %>
+<%end%>
