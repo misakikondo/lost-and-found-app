@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(
       :persons_name, :items_name, :places,
-      :memos, :found_date)
+      :memos, :found_date, :image)
   end
 
 end

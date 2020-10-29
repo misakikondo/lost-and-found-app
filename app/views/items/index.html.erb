@@ -8,7 +8,7 @@
         <% @items.each do |item| %>
           <div class= "item-list">
             <%= link_to "hoge" do %> 
-              <%# imagetag挿入 %>
+            <%= image_tag item.image, class: "item-img" %>
             <%end%>
             <div class="i-body">
               <div class='item-name'>
