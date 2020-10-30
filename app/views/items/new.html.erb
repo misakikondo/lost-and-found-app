@@ -1,11 +1,35 @@
 <h1>落とし物投稿画面</h1>
 
 <%= form_with model: @item, local: true do |f| %>
-  <%= f.file_field :image, id:"item-image"%>
-  <%=f.text_area :persons_name, placeholder:"あなたの名前", maxlength:"10"%>
-  <%=f.text_area :items_name, placeholder:"子供サイズの靴下"%>
-  <%=f.text_area :places, placeholder:"新宿駅西口周辺"%>
-  <%=f.text_area :memos, placeholder:"改札を出てすぐ左に落ちているのを見つけました"%>
-  <%= f.datetime_select :found_date, {} %>
-  <%= f.submit "投稿する" ,class: "new-btn-text" %>
+
+<main class="main">
+  <div class="inner">
+    <div class="items-image">
+    <%= f.file_field :image, id:"item-image"%>
+    </div>
+
+    <div class="your-name">
+    <%=f.text_area :persons_name, placeholder:"あなたの名前", maxlength:"10"%>
+    </div>
+
+    <div class="item-name">
+    <%=f.text_area :items_name, placeholder:"子供サイズの靴下"%>
+    </div>
+
+    <div class="place">
+    <%=f.text_area :places, placeholder:"新宿駅西口周辺"%>
+    </div>
+
+    <div class="memo">
+    <%=f.text_area :memos, placeholder:"改札を出てすぐ左に落ちているのを見つけました"%>
+    </div>
+
+    <div class="date">
+    <%= f.datetime_select :found_date, {} %>
+    </div>
+
+    <%= f.submit "投稿する" ,class: "new-btn-text" %>
+
+  </div>
+<main>
 <%end%>
