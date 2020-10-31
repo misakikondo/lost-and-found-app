@@ -1,6 +1,7 @@
 <h1>落とし物投稿画面</h1>
 
 <%= form_with model: @item, local: true do |f| %>
+<%= render 'shared/error_message', model: f.object %>
 
 <main class="main">
   <div class="inner">
