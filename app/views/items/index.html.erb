@@ -1,0 +1,34 @@
+<h1>落とし物一覧</h1>
+
+<%= link_to '投稿する', new_item_path %>
+
+  <main class="main">
+      <div class="inner">
+        <div class="i-wrapper">
+        <% @items.each do |item| %>
+          <div class= "item-list">
+            <%= link_to "hoge" do %> 
+            <%= image_tag item.image, class: "item-img" %>
+            <%end%>
+            <div class="i-body">
+              <div class='item-name'>
+                <h3>落ちてた物：<%= item.items_name %></h3>
+              </div>
+              <div class='person-name'>
+                <h3>見かけた人の名前：<%= item.persons_name %></h3>
+              </div>
+              <div class='found-place'>
+                <h3>見かけた場所：<%= item.places %></h3>
+              </div>
+              <div class='item-memo'>
+                <h3>詳細：<%= item.memos %></h3>
+              </div>
+              <div class='found-time'>
+                <h3>見かけた時間：<%= item.found_date %></h3>
+              </div>
+            </div>
+          </div>
+        <%end%> 
+        </div>
+      </div>
+  </main>
