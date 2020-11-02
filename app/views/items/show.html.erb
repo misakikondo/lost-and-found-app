@@ -1,0 +1,28 @@
+<main class="main">
+  <div class="inner">
+    <div class="i-wrapper">
+
+      <div class="item-list">
+        <%= image_tag @item.image, class: "item-img"%>
+        <div class="i-body">
+          <div class='item-name'>
+            <h3>落ちてた物：<%= @item.items_name %></h3>
+          </div>
+          <div class='person-name'>
+            <h3>見かけた人の名前：<%= @item.persons_name %></h3>
+          </div>
+          <div class='found-place'>
+            <h3>見かけた場所：<%= @item.places %></h3>
+          </div>
+          <div class='item-memo'>
+            <h3>詳細：<%= @item.memos %></h3>
+          </div>
+          <div class='found-time'>
+            <h3>見かけた時間：<%= @item.found_date %></h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>

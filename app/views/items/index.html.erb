@@ -7,7 +7,7 @@
         <div class="i-wrapper">
         <% @items.each do |item| %>
           <div class= "item-list">
-            <%= link_to "hoge" do %> 
+            <%= link_to item_path(item.id) do %> 
             <%= image_tag item.image, class: "item-img" %>
             <%end%>
             <div class="i-body">
